@@ -19,7 +19,7 @@ export default function Featured() {
   
   
 
-  console.log(data)
+  // console.log(data)
   return (
     <div className='featured'>
       {loading ? ("loading") : (<>

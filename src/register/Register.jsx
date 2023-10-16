@@ -24,7 +24,7 @@ export default function Register() {
             console.log(err)
         }
     }
-    console.log(credentials)
+    // console.log(credentials)
   return (
     <div>
         <style>

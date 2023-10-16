@@ -21,7 +21,7 @@ function List() {
 
   const { dispatch, dates:dates1, options:options1, city } = useContext(SearchContext)
 
-  console.log(destination)
+  // console.log(destination)
 
   const handleClick = ()=>{
     dispatch({type:"NEW_SEARCH", payload: {dates,destination,options}})
