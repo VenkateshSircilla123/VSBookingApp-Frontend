@@ -7,7 +7,7 @@ import {SearchContext} from '../../context/SearchContext'
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 export default function Reserve({ setOpen, hotelId, handleReserveOpen }) {
-  const {data,loading,error} = useFetch(`/hotels/room/${hotelId}`)
+  const {data,loading,error} = useFetch(`https://vsbookingapp-4sv7.onrender.com/api/hotels/room/${hotelId}`)
   const [selectRoom, setSelectRoom] = useState([])
   const {dates} = useContext(SearchContext)
   const navigate = useNavigate()

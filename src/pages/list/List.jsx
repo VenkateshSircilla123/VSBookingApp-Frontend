@@ -17,7 +17,7 @@ function List() {
   const [max, setMax] = useState(undefined)
   const [min, setMin] = useState(undefined)
 
-  const { data, loading, error, reFetch} = useFetch(`/hotels?city=${destination}&min=${min || 0}&max=${max || 99999}`)
+  const { data, loading, error, reFetch} = useFetch(`https://vsbookingapp-4sv7.onrender.com/api/hotels?city=${destination}&min=${min || 0}&max=${max || 99999}`)
 
   const { dispatch, dates:dates1, options:options1, city } = useContext(SearchContext)
 

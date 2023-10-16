@@ -18,7 +18,7 @@ export default function Login() {
         e.preventDefault()
         dispatch({type:"LOGIN_START"})
         try {
-            const res = await axios.post('/auth/login', credentials)
+            const res = await axios.post('https://vsbookingapp-4sv7.onrender.com/api/auth/login', credentials)
             dispatch({type:"LOGIN_SUCCESS",payload:res.data})
             alert("login successfull")
             navigate("/")

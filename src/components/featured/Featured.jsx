@@ -12,7 +12,7 @@ export default function Featured() {
         key: 'selection'
     }
 ]);
-  const { data, loading, error } = useFetch("/hotels/countByCity?cities=hyderabad,bangalore,mumbai")
+  const { data, loading, error } = useFetch("https://vsbookingapp-4sv7.onrender.com/api/hotels/countByCity?cities=hyderabad,bangalore,mumbai")
   // const { data1, loading:loading1, error:error1 } = useFetch("/hotels/find")
 
   const { dispatch,options } = useContext(SearchContext)

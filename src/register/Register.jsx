@@ -17,7 +17,7 @@ export default function Register() {
     const handleClick = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.post('/auth/register', credentials)
+            const res = await axios.post('https://vsbookingapp-4sv7.onrender.com/api/auth/register', credentials)
             alert("Register successfull")
             navigate("/")
         } catch (err) {
