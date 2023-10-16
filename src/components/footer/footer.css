@@ -1,0 +1,40 @@
+.footer{
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+  
+.fLists{
+  max-width: 1024px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  /* justify-content: space-between; */
+  margin-bottom: 50px;
+  overflow-x: scroll;
+}
+
+.fLists::-webkit-scrollbar{
+  display: none;
+}
+.fList{
+  list-style: none;
+  padding: 0;
+}
+.fListItem{
+  margin-bottom: 10px;
+  color: #003580;
+  cursor: pointer;
+}
+.fText{
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .fList{
+    display: none;
+  }
+}
