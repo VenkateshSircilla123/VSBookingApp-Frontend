@@ -37,13 +37,14 @@ export default function Reserve({ setOpen, hotelId, handleReserveOpen }) {
     try {
       await Promise.all(
         selectRoom.map((roomId) => {
-          const res = axios.put(`/rooms/availability/${roomId}`, {
+          const res = axios.put(`https://vsbookingapp-4sv7.onrender.com/api/rooms/availability/${roomId}`, {
             dates: allDates,
           });
           return res.data;
         })
       );
       setOpen(false);
+      alert("Booked successfully. Have a nice Day..");
       navigate("/");
     } catch (err) {}
   };
