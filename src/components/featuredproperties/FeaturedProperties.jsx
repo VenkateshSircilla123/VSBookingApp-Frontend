@@ -7,7 +7,7 @@ const FeaturedProperties = () => {
   console.log(data);
   return (
     <div className="fp">
-      {!loading ? (
+      {loading ? (
         <div
           style={{
             display: "flex",
