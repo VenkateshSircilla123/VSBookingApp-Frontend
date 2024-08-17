@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext, useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import { SearchContext } from "../../context/SearchContext";
-import axios from "axios";
+import newRequest from "../../utils/newRequest";
+
 import { useNavigate } from "react-router-dom";
 export default function Reserve({ setOpen, hotelId, handleReserveOpen }) {
   const { data, loading, error } = useFetch(`/hotels/room/${hotelId}`);
@@ -42,8 +43,8 @@ export default function Reserve({ setOpen, hotelId, handleReserveOpen }) {
   const handleClick = async () => {
     try {
       await Promise.all(
-        selectRoom.map((roomId) => {
-          const res = axios.put(`/rooms/availability/${roomId}`, {
+        selectRoom.map(async (roomId) => {
+          const res = await newRequest.put(`/rooms/availability/${roomId}`, {
             dates: allDates,
           });
           return res.data;
